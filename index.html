@@ -126,7 +126,197 @@ Inicio
 Fimalgoritmo
         </code></pre>
         <br><br>
+        <h4>Exercicio 01 - Aula 02</h4>
+        <pre><code class="hljs">
+Algoritmo "Aprovado ou Reprovado"
+
+Var
+   // Seção de Declarações das variáveis
+   va1,va2,va3,oat,soma: real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreval("====Sistema de verificação de notas====")
+   escreval()
+   escreva("Informe a nota da VAI: ")
+   leia (va1)
+   enquanto (va1<0)ou(va1>15) faca
+      escreval("VALOR INCORRETO!!")
+      escreval("Favor inserir um valor entre 0 e 15")
+      leia(va1)
+   fimenquanto
+   escreva("Informe a nota da VAII: ")
+   leia (va2)
+   enquanto (va2<0)ou(va2>25) faca
+      escreval("VALOR INCORRETO!!")
+      escreval("Favor inserir um valor entre 0 e 25")
+      leia(va2)
+   fimenquanto
+   escreva("Informe a nota da VAIII: ")
+   leia (va3)
+   enquanto (va3<0)ou(va3>35) faca
+      escreval("VALOR INCORRETO!!")
+      escreval("Favor inserir um valor entre 0 e 35")
+      leia(va3)
+   fimenquanto
+      escreva("Informe a nota da OAT: ")
+   leia (oat)
+   enquanto (oat<0)ou(oat>25) faca
+      escreval("VALOR INCORRETO!!")
+      escreval("Favor inserir um valor entre 0 e 25")
+      leia(oat)
+   fimenquanto
+   soma:=va1+va2+va3+oat
+   escreval("A soma das notas é: ",soma)
+   se (soma<40) entao
+      escreval("O aluno está REPROVADO, pois sua nota foi inferior a 40 pontos")
+   senao
+        se (soma>=40) e (soma<60) entao
+           escreval ("O aluno está de RECUPERAÇÃO, pois sua nota foi inferior a 60 pontos e superior a 40 pontos")
+        senao
+             escreval("O aluno está APROVADO, pois sua nota foi superior a 60 pontos")
+        fimse
+   fimse
+Fimalgoritmo
+        </code></pre>
+        <br><br>
+        <h4>Exercicio 02 - Aula 02</h4>
+        <pre><code class="hljs">
+            Algoritmo "Maior número"
+
+            Var
+               // Seção de Declarações das variáveis
+               n1,n2: real
+            
+            Inicio
+               // Seção de Comandos, procedimento, funções, operadores, etc...
+               escreval("====Descubra qual número é maior!====")
+               escreval()
+               escreva("Informe o primeiro número: ")
+               leia (n1)
+               escreva("Informe o segundo número: ")
+               leia (n2)
+               se (n1=n2) entao
+                  escreval("Os números são iguais")
+               senao
+                  se (n1>n2) entao
+                     escreval(n1," é maior do que ",n2)
+                  senao
+                     escreval(n2," é maior do que ",n1)
+                  fimse
+               fimse
+            Fimalgoritmo
+        </code></pre>
+        <br><br>
+        <h4>Exercicio 03 - Aula 02</h4>
+        <pre><code class="hljs">
+            Algoritmo "Ordem crescente"
+
+            Var
+               // Seção de Declarações das variáveis
+               n1,n2,n3,menor,meio,maior: inteiro
+            
+            Inicio
+               // Seção de Comandos, procedimento, funções, operadores, etc...
+               escreva("Informe o primeiro número: ")
+               leia (n1)
+               escreva("Informe o segundo número: ")
+               leia (n2)
+               escreva("Informe o terceiro número: ")
+               leia (n3)
+               //Verificando qual é o menor número
+               se (n1<n2) e (n1<n3) entao
+                  menor:= n1
+               senao
+                  se (n2<n1) e (n2<n3) entao
+                     menor:= n2
+                  senao
+                     menor:=n3
+                  fimse
+               fimse
+               //Verificando qual é o maio número
+               se (n1>n2) e (n1>n3) entao
+                  maior:= n1
+               senao
+                  se (n2>n1) e (n2>n3) entao
+                     maior:= n2
+                  senao
+                     maior:=n3
+                  fimse
+               fimse
+               //Descobrir o número do meio
+               meio:= (n1+n2+n3) - maior - menor
+            
+               escreval("Os números em ordem crescente são: ",menor,meio,maior)
+            
+            Fimalgoritmo
+        </code></pre>
+        <br><br>
+        <h4>Exercicio 04 - Aula 02</h4>
+        <pre><code class="hljs">
+            Algoritmo "Par ou Impar"
+
+            Var
+               // Seção de Declarações das variáveis
+               n1: real
+               resto: real
+            
+            Inicio
+               // Seção de Comandos, procedimento, funções, operadores, etc...
+               escreva("Informe o número: ")
+               leia (n1)
+               resto:= n1%2
+               se resto<>0 entao
+                  escreval("O número é IMPAR!")
+               senao
+                  escreval("O número é PAR!")
+               fimse
+            Fimalgoritmo
+        </code></pre>
+        <br><br>
+        <h4>Exercicio 05 - Aula 02</h4>
+        <pre><code class="hljs">
+            Algoritmo "Menu"
+
+            Var
+               // Seção de Declarações das variáveis
+               n1,n2,resultado:real
+               opcao:inteiro
+            
+            Inicio
+               // Seção de Comandos, procedimento, funções, operadores, etc...
+               escreval("MENU DE OPÇÕES")
+               escreval ()
+               escreval("Opção 1 - SOMAR DOIS NÚMEROS")
+               escreval("Opção 2 - RAIZ QUADRADA DE UM NÚMERO")
+               leia(opcao)
+               escolha opcao
+                  caso 1
+                     escreval("Informe o primeiro número")
+                     leia(n1)
+                     escreval("Informe o segundo número")
+                     leia(n2)
+                     resultado:= n1+n2
+                     escreval("O resultado da soma é: ", resultado )
+                  caso 2
+                     escreval("Informe o número")
+                     leia(n1)
+                     resultado:= raizQ(n1)
+                     escreval("O resultado da raiz quadrada é: ", resultado)
+               fimescolha
+            Fimalgoritmo
+        </code></pre>
+        <br><br>
     </div>
+
+
+
+
+
+
+
+
+
 
 
     <!-- Scripts JS -->
